@@ -1,10 +1,10 @@
 package com.octopus.GoldenOffice.controllers;
 
 
+import com.octopus.GoldenOffice.businessLogic.interfaces.UtilityLogicInterface;
 import com.octopus.GoldenOffice.models.Customer;
 import com.octopus.GoldenOffice.service.CustomerService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.annotation.Id;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -16,6 +16,9 @@ import java.util.List;
 @RestController
 @RequestMapping("/customer")
 public class CustomerRestController {
+
+    @Autowired
+    private UtilityLogicInterface utilityLogic;
 
     @Autowired
     private CustomerService customerService;
@@ -38,7 +41,7 @@ public class CustomerRestController {
 
     @PostMapping(value="/create")
     public ResponseEntity<?> savOorUpdateCustomer(@RequestBody Customer customer) {
-        String CustId = "Customer"+"_"+IdGenerator();
+        String CustId = "Customer" +"_"+ utilityLogic.IdGenerator();
         customer.setCustId(CustId);
         customerService.saveOrUpdateCustomer(customer);
         return new ResponseEntity("Customer created successfully", HttpStatus.OK);
@@ -51,26 +54,4 @@ public class CustomerRestController {
         customerService.deleteAccount(customerService.findByEmail(email).getEmail());
     }
 
-
-    /** Id Generator for Customer
-     * Catches the Current time and Split and join into a String to make Customised Id
-     * for Every customer
-     */
-
-    public String IdGenerator() {
-        Date date = new Date();
-        SimpleDateFormat formatter = new SimpleDateFormat("dd-M-yyyy hh:mm:ss");
-        String strDate = formatter.format(date);
-        System.out.println("Date Format with dd-M-yyyy hh:mm:ss : "+strDate);
-
-        String splitter[] = strDate.split("-");
-        String dater = String.join("", splitter);
-        String spliter[] = dater.split(":");
-        dater = String.join("", spliter);
-        spliter = dater.split(" ");
-        dater = String.join("", spliter);
-        System.out.println(dater.trim());
-
-        return dater;
-    }
 }
