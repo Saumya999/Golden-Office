@@ -1,7 +1,7 @@
 # Golden-Office
 Customer Case management
 
-POST Create Case API : '/case/createCase'
+### POST Create Case API : '/case/createCase'
 Payload 
 
 {
@@ -15,6 +15,6 @@ Payload
 
 
 
-GET get all customer API : '/customer/allCustomer'
+### GET get all customer API : '/customer/allCustomer'
 
-GET get all case API: '/case/allCases
+### GET get all case API: '/case/allCases
