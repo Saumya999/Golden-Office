@@ -17,4 +17,4 @@ Payload
 
 ### GET get all customer API : '/customer/allCustomer'
 
-### GET get all case API: '/case/allCases
+### GET get all case API: '/case/allCases'
