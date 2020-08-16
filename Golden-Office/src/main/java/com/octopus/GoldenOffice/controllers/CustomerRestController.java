@@ -25,7 +25,7 @@ public class CustomerRestController {
 
     /** Find All the Customers  */
 
-    @GetMapping(value = "/")
+    @GetMapping(value = "/allCustomer")
     public List<Customer> getAllCustomers() {
         return customerService.findAll();
     }
@@ -40,7 +40,7 @@ public class CustomerRestController {
     /** Create the Customers and Update the Customer credentials */
 
     @PostMapping(value="/create")
-    public ResponseEntity<?> savOorUpdateCustomer(@RequestBody Customer customer) {
+    public ResponseEntity<?> saveOrUpdateCustomer(@RequestBody Customer customer) {
         String CustId = "Customer" +"_"+ utilityLogic.IdGenerator();
         customer.setCustId(CustId);
         customerService.saveOrUpdateCustomer(customer);
