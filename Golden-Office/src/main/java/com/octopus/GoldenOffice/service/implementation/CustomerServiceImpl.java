@@ -4,8 +4,8 @@ import com.octopus.GoldenOffice.models.Customer;
 import com.octopus.GoldenOffice.repositories.CustomerRepository;
 import com.octopus.GoldenOffice.service.CustomerService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.scrypt.SCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
-
 import java.util.List;
 
 @Service
@@ -25,6 +25,9 @@ public class CustomerServiceImpl implements CustomerService {
 
     @Override
     public void saveOrUpdateCustomer(Customer customer) {
+        SCryptPasswordEncoder sCryptPasswordEncoder = new SCryptPasswordEncoder();
+        String base64Hash = sCryptPasswordEncoder.encode(customer.getPassword());
+        customer.setPassword(base64Hash);
         customerRepository.save(customer);
     }
 
@@ -33,4 +36,22 @@ public class CustomerServiceImpl implements CustomerService {
         customerRepository.deleteById(id);
     }
 
+    /** this function needs to developed for the sake of login
+     * credentials matching purpose
+     * @param customer
+     * @return boolean
+     */
+
+    @Override
+    public boolean matchLoginCredentials(Customer customer) {
+        Customer dbCustomer = customerRepository.findByEmail(customer.getEmail());
+        String dbCustomerPassword = dbCustomer.getPassword();
+        SCryptPasswordEncoder sCryptPasswordEncoder = new SCryptPasswordEncoder();
+        String loginCustomerPassword = sCryptPasswordEncoder.encode(customer.getPassword());
+
+        if (dbCustomerPassword == loginCustomerPassword) {
+            return true;
+        }
+        return false;
+    }
 }
