@@ -8,9 +8,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
-import java.text.SimpleDateFormat;
-import java.util.Date;
 import java.util.List;
 
 @RestController
@@ -42,7 +39,7 @@ public class CustomerRestController {
     @PostMapping(value="/create")
     public ResponseEntity<?> saveOrUpdateCustomer(@RequestBody Customer customer) {
         String CustId = "Customer" +"_"+ utilityLogic.IdGenerator();
-        customer.setCustId(CustId);
+        customer.setId(CustId);
         customerService.saveOrUpdateCustomer(customer);
         return new ResponseEntity("Customer created successfully", HttpStatus.OK);
     }

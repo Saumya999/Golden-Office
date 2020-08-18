@@ -11,7 +11,6 @@ public class Customer {
 
     @Id
     private String id;
-    private String custId;
     private String firstName;
     private String lastName;
     private String email;
@@ -19,14 +18,6 @@ public class Customer {
     private String agentId;
 
     public Customer() {
-    }
-
-    public String getCustId() {
-        return custId;
-    }
-
-    public void setCustId(String custId) {
-        this.custId = custId;
     }
 
     public String getId() {
