@@ -16,6 +16,9 @@ public class Customer {
     private String email;
     private List<String> caseList;
     private String agentId;
+    private String password;
+
+
 
     public Customer() {
     }
@@ -66,5 +69,13 @@ public class Customer {
 
     public void setAgentId(String agentId) {
         this.agentId = agentId;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 }

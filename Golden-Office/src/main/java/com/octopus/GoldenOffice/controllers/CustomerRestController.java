@@ -8,6 +8,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+
+import java.security.NoSuchAlgorithmException;
+import java.security.spec.InvalidKeySpecException;
 import java.util.List;
 
 @RestController
@@ -34,7 +37,10 @@ public class CustomerRestController {
         return customerService.findByEmail(email);
     }
 
-    /** Create the Customers and Update the Customer credentials */
+    /** Create the Customers and Update the Customer credentials
+     * @param customer
+     * @return Response entity
+     */
 
     @PostMapping(value="/create")
     public ResponseEntity<?> saveOrUpdateCustomer(@RequestBody Customer customer) {
@@ -51,4 +57,11 @@ public class CustomerRestController {
         customerService.deleteAccount(customerService.findByEmail(email).getEmail());
     }
 
+    @PostMapping(value = "/login")
+    public ResponseEntity<?> loginCustomer(@RequestBody Customer customer)  {
+        if (customerService.matchLoginCredentials(customer)) {
+            return new ResponseEntity("Customer Logged in Successfully", HttpStatus.OK);
+        }
+        return new ResponseEntity("User or Password Invalid", HttpStatus.BAD_REQUEST);
+    }
 }
