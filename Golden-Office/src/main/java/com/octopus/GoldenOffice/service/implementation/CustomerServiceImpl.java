@@ -47,7 +47,7 @@ public class CustomerServiceImpl implements CustomerService {
         Customer dbCustomer = customerRepository.findByEmail(customer.getEmail());
         String dbCustomerPassword = dbCustomer.getPassword();
         SCryptPasswordEncoder sCryptPasswordEncoder = new SCryptPasswordEncoder();
-        if (sCryptPasswordEncoder.matches(customer.getPassword(), dbCustomerPassword)) {
+        if (sCryptPasswordEncoder.matches(customer.getPassword(), dbCustomerPassword)){
             return true;
         }
         return false;
