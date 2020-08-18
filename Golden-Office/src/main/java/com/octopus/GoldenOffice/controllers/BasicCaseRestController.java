@@ -34,7 +34,7 @@ public class BasicCaseRestController {
     @PostMapping(value = "/createCase")
     public ResponseEntity<?> saveOrUpdateCase(@RequestBody BasicCase basicCase) {
         String caseId = "Case" +"_"+ utilityLogic.IdGenerator();
-        basicCase.setCaseId(caseId);
+        basicCase.setId(caseId);
         basicCaseService.createCase(basicCase);
         return new ResponseEntity("Case has been created successfully", HttpStatus.OK);
     }

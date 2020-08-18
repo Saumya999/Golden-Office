@@ -42,7 +42,7 @@ public class CustomerRestController {
     @PostMapping(value="/create")
     public ResponseEntity<?> saveOrUpdateCustomer(@RequestBody Customer customer) {
         String CustId = "Customer" +"_"+ utilityLogic.IdGenerator();
-        customer.setCustId(CustId);
+        customer.setId(CustId);
         customerService.saveOrUpdateCustomer(customer);
         return new ResponseEntity("Customer created successfully", HttpStatus.OK);
     }

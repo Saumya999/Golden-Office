@@ -9,7 +9,6 @@ import java.util.Date;
 public class BasicCase {
     @Id
     private String id;
-    private String caseId;
     private String caseType;
     private String caseShortDescription;
     private String caseLongDescription;
@@ -30,11 +29,10 @@ public class BasicCase {
     public BasicCase() {
     }
 
-    public BasicCase(String id, String caseId, String caseType,
+    public BasicCase(String id, String caseType,
                      String caseShortDescription, String caseLongDescription,
                      String caseImportance, Date createdAt, String email) {
         this.id = id;
-        this.caseId = caseId;
         this.caseType = caseType;
         this.caseShortDescription = caseShortDescription;
         this.caseLongDescription = caseLongDescription;
@@ -51,13 +49,6 @@ public class BasicCase {
         this.id = id;
     }
 
-    public String getCaseId() {
-        return caseId;
-    }
-
-    public void setCaseId(String caseId) {
-        this.caseId = caseId;
-    }
 
     public String getCaseType() {
         return caseType;
