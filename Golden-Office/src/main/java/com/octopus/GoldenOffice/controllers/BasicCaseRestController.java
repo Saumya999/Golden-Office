@@ -21,15 +21,21 @@ public class BasicCaseRestController {
     @Autowired
     private UtilityLogicInterface utilityLogic;
 
+    /** To get All the cases in the case List */
+
     @GetMapping(value = "/allCases")
     public List<BasicCase> getAllCases() {
         return basicCaseService.findAll();
     }
 
+    /** Delete the case according to their case ID */
+
     @DeleteMapping(value = "/delete")
     public void deleteCase(@PathVariable String caseId) {
         basicCaseService.deleteCase(caseId);
     }
+
+    /** Creating the case for Users*/
 
     @PostMapping(value = "/createCase")
     public ResponseEntity<?> saveOrUpdateCase(@RequestBody BasicCase basicCase) {
