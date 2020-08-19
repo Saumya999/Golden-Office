@@ -13,7 +13,23 @@ Payload
 }
 
 
+### Post create Customer: '/customer/create'
+Paylaod 
+{
+    "firstName":"Saumya",
+    "lastName":"Sarkar",
+    "email":"saumya123@gmail.com",
+    "caseList":[],
+    "agentId":"",
+    "password":"Martini"
+}
 
+### Post login Customer : '/customer/login'
+Payload
+{
+     "email":"saumya123@gmail.com",
+     "password":"Martini"
+}
 
 ### GET get all customer API : '/customer/allCustomer'
 
