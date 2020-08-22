@@ -19,7 +19,9 @@ public class EmployeeServiceImpl implements EmployeeService {
     @Override
     public void createEmployee(Employee employee) {
         String empID = mapEmployeeToR1Employee.generateRoleBasedEmployeeId(employee);
-        employee.setId(empID);
+        if (empID != null) {
+            employee.setId(empID);
+        }
         employeeRepository.save(employee);
     }
 }
