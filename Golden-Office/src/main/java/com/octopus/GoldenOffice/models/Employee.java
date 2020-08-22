@@ -1,26 +1,39 @@
 package com.octopus.GoldenOffice.models;
 
-
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.util.List;
 
-@Document(collection = "customer")
-public class Customer {
+@Document(collection = "employee")
+public class Employee {
+
+    /** Variables for Employee class */
 
     @Id
     private String id;
     private String firstName;
     private String lastName;
     private String email;
-    private List<String> caseList;
-    private String password;
+    private String role;
 
+    /** Default Constructor */
 
-
-    public Customer() {
+    public Employee() {
     }
+
+    /** Parametrized Constructor */
+
+    public Employee(String id, String firstName, String lastName,
+                    String email, String role) {
+        this.id = id;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.email = email;
+        this.role = role;
+    }
+
+    /** Getter Setter */
 
     public String getId() {
         return id;
@@ -54,19 +67,11 @@ public class Customer {
         this.email = email;
     }
 
-    public List<String> getCaseList() {
-        return caseList;
+    public String getRole() {
+        return role;
     }
 
-    public void setCaseList(List<String> caseList) {
-        this.caseList = caseList;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
+    public void setRole(String role) {
+        this.role = role;
     }
 }

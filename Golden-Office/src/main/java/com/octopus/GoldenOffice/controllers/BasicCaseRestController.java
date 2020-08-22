@@ -2,7 +2,6 @@ package com.octopus.GoldenOffice.controllers;
 
 import com.octopus.GoldenOffice.businessLogic.interfaces.UtilityLogicInterface;
 import com.octopus.GoldenOffice.models.BasicCase;
-import com.octopus.GoldenOffice.models.Customer;
 import com.octopus.GoldenOffice.service.BasicCaseService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
