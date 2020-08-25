@@ -33,3 +33,19 @@ Payload
 ### GET get all customer API : '/customer/allCustomer'
 
 ### GET get all case API: '/case/allCases'
+
+### GET get developers under any certain manager '/employee/getMyDeveloper/{managerID}'
+
+### GET get all Developers '/employee/getAllDevelopers'
+
+### GET get all managers '/employee/getAllManagers'
+
+### POST assign a manager to a developer '/employee/assignManager/{managerId}'
+Payload 
+{
+    "id": "Developer_2682020123227",
+    "firstName":"Dev6",
+    "lastName":"Dev6",
+    "email":"dev6@gmail.com",
+    "role":"Developer"
+}
