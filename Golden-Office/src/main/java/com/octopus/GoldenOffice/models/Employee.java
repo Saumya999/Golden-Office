@@ -11,11 +11,11 @@ public class Employee {
     /** Variables for Employee class */
 
     @Id
-    private String id;
-    private String firstName;
-    private String lastName;
-    private String email;
-    private String role;
+    public String id;
+    public String firstName;
+    public String lastName;
+    public String email;
+    public String role;
 
     /** Default Constructor */
 
