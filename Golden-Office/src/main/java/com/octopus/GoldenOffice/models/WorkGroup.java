@@ -15,7 +15,7 @@ public class WorkGroup {
     private String groupName;
     private String groupDefinition;
     private String managerId;
-    private List<String> developerIds;
+    private List<String> ticketIds;
 
     /** Default Constructor */
 
@@ -26,12 +26,12 @@ public class WorkGroup {
     /** Parametrized Constructor */
 
     public WorkGroup(String id, String groupName, String groupDefinition,
-                     String managerId, List<String> developerIds) {
+                     String managerId, List<String> ticketIds) {
         this.id = id;
         this.groupName = groupName;
         this.groupDefinition = groupDefinition;
         this.managerId = managerId;
-        this.developerIds = developerIds;
+        this.ticketIds = ticketIds;
     }
 
     /** Getter Setter */
@@ -68,11 +68,11 @@ public class WorkGroup {
         this.managerId = managerId;
     }
 
-    public List<String> getDeveloperIds() {
-        return developerIds;
+    public List<String> getTicketIds() {
+        return ticketIds;
     }
 
-    public void setDeveloperIds(List<String> developerIds) {
-        this.developerIds = developerIds;
+    public void setTicketIds(List<String> ticketIds) {
+        this.ticketIds = ticketIds;
     }
 }

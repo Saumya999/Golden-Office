@@ -8,13 +8,13 @@ import java.util.Date;
 @Document(collection = "case")
 public class BasicCase {
     @Id
-    private String id;
-    private String caseType;
-    private String caseShortDescription;
-    private String caseLongDescription;
-    private String caseImportance;
-    private Date createdAt;
-    private String email;
+    public String id;
+    public String caseType;
+    public String caseShortDescription;
+    public String caseLongDescription;
+    public String caseImportance;
+    public Date createdAt;
+    public String email;
 
     public String getCustomerEmail() {
         return email;

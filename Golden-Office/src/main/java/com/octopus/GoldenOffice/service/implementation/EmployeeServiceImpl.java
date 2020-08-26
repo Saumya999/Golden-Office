@@ -83,7 +83,7 @@ public class EmployeeServiceImpl implements EmployeeService {
 
     /** Get all the Developers under a certain manager */
 
-    
+
     @Override
     public List<Optional<Developer>> getDevelopersByManager(String managerId) {
         Optional<Manager> manager = managerRepository.findById(managerId);
