@@ -49,3 +49,12 @@ Payload
     "email":"dev6@gmail.com",
     "role":"Developer"
 }
+
+### POST create Team/WorkGroup with ManagerId  '/workGroup/createTeam'
+Payload 
+{
+    "groupName":"Team-Durga",
+    "groupDefinition":"UI-UX Design Team",
+    "managerId":"Manager_2582020104920",
+    "ticketIds": []
+}
