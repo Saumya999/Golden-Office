@@ -20,6 +20,7 @@ Paylaod
     "lastName":"Sarkar",
     "email":"saumya123@gmail.com",
     "caseList":[],
+    "ticketList":[],
     "password":"Martini"
 }
 
