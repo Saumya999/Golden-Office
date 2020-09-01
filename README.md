@@ -1,8 +1,9 @@
 ### Golden-Office
 # Customer Case management
 
-### POST Create Case API : '/case/createCase'
-Payload 
+### POST Create Case API : 
+### Endpoint: '/case/createCase'
+### Payload 
 
 {
     "caseType": "Regular",
@@ -13,8 +14,9 @@ Payload
 }
 
 
-### Post create Customer: '/customer/create'
-Paylaod 
+### Post create Customer: 
+### Endpoint: '/customer/create'
+### Paylaod 
 {
     "firstName":"Saumya",
     "lastName":"Sarkar",
@@ -24,25 +26,32 @@ Paylaod
     "password":"Martini"
 }
 
-### Post login Customer : '/customer/login'
-Payload
+### Post login Customer : 
+### Endpoint: '/customer/login'
+### Payload
 {
      "email":"saumya123@gmail.com",
      "password":"Martini"
 }
 
-### GET get all customer API : '/customer/allCustomer'
+### GET get all customer API : 
+### Endpoint: '/customer/allCustomer'
 
-### GET get all case API: '/case/allCases'
+### GET get all case API: 
+### Endpoint: '/case/allCases'
 
-### GET get developers under any certain manager '/employee/getMyDeveloper/{managerID}'
+### GET get developers under any certain manager:
+### Endpoint: '/employee/getMyDeveloper/{managerID}'
 
-### GET get all Developers '/employee/getAllDevelopers'
+### GET get all Developers: 
+### Endpoint:'/employee/getAllDevelopers'
 
-### GET get all managers '/employee/getAllManagers'
+### GET get all managers: 
+### Endpoint:'/employee/getAllManagers'
 
-### POST assign a manager to a developer '/employee/assignManager/{managerId}'
-Payload 
+### POST assign a manager to a developer:
+### Endpoint:'/employee/assignManager/{managerId}'
+### Payload 
 {
     "id": "Developer_2682020123227",
     "firstName":"Dev6",
@@ -51,8 +60,9 @@ Payload
     "role":"Developer"
 }
 
-### POST create Team/WorkGroup with ManagerId  '/workGroup/createTeam'
-Payload 
+### POST create Team/WorkGroup with ManagerId:
+### Endpoint:'/workGroup/createTeam'
+### Payload 
 {
     "groupName":"Team-Durga",
     "groupDefinition":"UI-UX Design Team",
