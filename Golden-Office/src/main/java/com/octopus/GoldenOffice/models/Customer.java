@@ -15,6 +15,7 @@ public class Customer {
     private String lastName;
     private String email;
     private List<String> caseList;
+    private List<String> ticketList;
     private String password;
 
 
@@ -68,5 +69,13 @@ public class Customer {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public List<String> getTicketList() {
+        return ticketList;
+    }
+
+    public void setTicketList(List<String> ticketList) {
+        this.ticketList = ticketList;
     }
 }

@@ -15,14 +15,9 @@ public class BasicCase {
     public String caseImportance;
     public Date createdAt;
     public String email;
+    public String status;
 
-    public String getCustomerEmail() {
-        return email;
-    }
 
-    public void setCustomerEmail(String customerEmail) {
-        this.email = customerEmail;
-    }
 
     /** Getter and Setter and Constructor for Model class */
 
@@ -31,7 +26,7 @@ public class BasicCase {
 
     public BasicCase(String id, String caseType,
                      String caseShortDescription, String caseLongDescription,
-                     String caseImportance, Date createdAt, String email) {
+                     String caseImportance, Date createdAt, String email, String status) {
         this.id = id;
         this.caseType = caseType;
         this.caseShortDescription = caseShortDescription;
@@ -39,6 +34,7 @@ public class BasicCase {
         this.caseImportance = caseImportance;
         this.createdAt = createdAt;
         this.email = email;
+        this.status = status;
     }
 
     public String getId() {
@@ -88,5 +84,21 @@ public class BasicCase {
 
     public void setCreatedAt(Date createdAt) {
         this.createdAt = createdAt;
+    }
+
+    public String getCustomerEmail() {
+        return email;
+    }
+
+    public void setCustomerEmail(String email) {
+        this.email = email;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
     }
 }
