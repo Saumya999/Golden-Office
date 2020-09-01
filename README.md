@@ -1,7 +1,7 @@
-### Golden-Office
-# Customer Care Management
+# Golden-Office
+### Customer Care Management
 
-### POST Create Case API : 
+## POST Create Case API : 
 ### Endpoint: '/case/createCase'
 ### Payload 
 
@@ -14,7 +14,7 @@
 }
 
 
-### Post create Customer: 
+## Post create Customer: 
 ### Endpoint: '/customer/create'
 ### Paylaod 
 {
@@ -26,7 +26,7 @@
     "password":"Martini"
 }
 
-### Post login Customer : 
+## Post login Customer : 
 ### Endpoint: '/customer/login'
 ### Payload
 {
@@ -34,22 +34,22 @@
      "password":"Martini"
 }
 
-### GET get all customer API : 
+## GET get all customer API : 
 ### Endpoint: '/customer/allCustomer'
 
-### GET get all case API: 
+## GET get all case API: 
 ### Endpoint: '/case/allCases'
 
-### GET get developers under any certain manager:
+## GET get developers under any certain manager:
 ### Endpoint: '/employee/getMyDeveloper/{managerID}'
 
-### GET get all Developers: 
+## GET get all Developers: 
 ### Endpoint:'/employee/getAllDevelopers'
 
-### GET get all managers: 
+## GET get all managers: 
 ### Endpoint:'/employee/getAllManagers'
 
-### POST assign a manager to a developer:
+## POST assign a manager to a developer:
 ### Endpoint:'/employee/assignManager/{managerId}'
 ### Payload 
 {
@@ -60,7 +60,7 @@
     "role":"Developer"
 }
 
-### POST create Team/WorkGroup with ManagerId:
+## POST create Team/WorkGroup with ManagerId:
 ### Endpoint:'/workGroup/createTeam'
 ### Payload 
 {
