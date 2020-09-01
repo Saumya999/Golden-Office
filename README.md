@@ -1,5 +1,5 @@
 ### Golden-Office
-# Customer Case management
+# Customer Care Management
 
 ### POST Create Case API : 
 ### Endpoint: '/case/createCase'
