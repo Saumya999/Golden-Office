@@ -1,0 +1,1 @@
+export const LOGIN_USER_ENDPOINT = 'http://localhost:8081/customer/login';

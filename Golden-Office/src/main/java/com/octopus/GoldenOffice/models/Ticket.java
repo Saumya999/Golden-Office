@@ -9,8 +9,6 @@ import java.util.Date;
 public class Ticket extends BasicCase{
 
     /** Variable declaration */
-    @Id
-    private String Id;
     private String developerId;
     private String workGroupId;
     private String managerId;
@@ -22,7 +20,7 @@ public class Ticket extends BasicCase{
 
     /** Parameterized constructor */
 
-    public Ticket(String developerId, String workGroupId, String managerId) {
+    public Ticket(String id, String developerId, String workGroupId, String managerId) {
         this.developerId = developerId;
         this.workGroupId = workGroupId;
         this.managerId = managerId;
