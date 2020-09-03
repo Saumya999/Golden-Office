@@ -9,8 +9,6 @@ import java.util.Date;
 public class Ticket extends BasicCase{
 
     /** Variable declaration */
-    @Id
-    private String Id;
     private String developerId;
     private String workGroupId;
     private String managerId;
