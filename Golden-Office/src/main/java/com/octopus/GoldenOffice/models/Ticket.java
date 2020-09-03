@@ -20,7 +20,7 @@ public class Ticket extends BasicCase{
 
     /** Parameterized constructor */
 
-    public Ticket(String id, String developerId, String workGroupId, String managerId) {
+    public Ticket(String developerId, String workGroupId, String managerId) {
         this.developerId = developerId;
         this.workGroupId = workGroupId;
         this.managerId = managerId;
