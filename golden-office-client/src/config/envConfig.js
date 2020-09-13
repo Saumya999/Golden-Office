@@ -1,0 +1,1 @@
+export const ENV_URL = 'http://localhost:8081';

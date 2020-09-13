@@ -1,1 +1,1 @@
-export const CREATE_USER_ENDPOINT = 'http://localhost:8081/customer/create';
+export const CREATE_USER_ENDPOINT = '/customer/create';
