@@ -24,8 +24,16 @@
   color: white;
 }
 
+.ui.form .field .ui.input input {
+  width: 200px;
+}
+
 .App-link {
   color: #61dafb;
+}
+
+.abc {
+  margin: 100px 200px;
 }
 
 @keyframes App-logo-spin {

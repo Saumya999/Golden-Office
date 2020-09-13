@@ -1,24 +1,19 @@
 import React from 'react';
-import logo from './logo.svg';
+import {Switch, Route} from 'react-router';
 import './App.css';
+import 'semantic-ui-css/semantic.min.css'
+import Registration from './Components/Registration/createCustomerView';
+import Login from './Components/Login/loginFormView';
+import Admin from './Components/Admin/adminView';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Switch>
+        <Route exact path='/' component={Login}/>
+        <Route eaxct path='/register' component={Registration} />
+        <Route exact path='/adminPanel' component={Admin} />
+      </Switch>
     </div>
   );
 }

@@ -3,7 +3,7 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import AppBar from 'material-ui/AppBar';
 import RaisedButton from 'material-ui/RaisedButton';
 import TextField from 'material-ui/TextField';
-import {loginUser} from './login.component';
+import loginUser from './login.component';
 
 
 class Login extends Component {
@@ -17,12 +17,14 @@ class Login extends Component {
     }
 
     async handleClick() {
-        console.log("Hello");
         const input = {
             email: this.state.username,
             password: this.state.password
         };
-        await loginUser(input);
+        await loginUser(input).then(() => {
+            this.props.history.push('/adminPanel');
+        });
+       
     }
 
     render() {
