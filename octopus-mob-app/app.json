@@ -1,0 +1,12 @@
+{
+  "name": "octopus-mob-app",
+  "displayName": "octopus-mob-app",
+  "expo": {
+    "name": "octopus-mob-app",
+    "slug": "octopus-mob-app",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
