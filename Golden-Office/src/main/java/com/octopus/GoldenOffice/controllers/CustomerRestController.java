@@ -54,10 +54,11 @@ public class CustomerRestController {
         customerService.deleteAccount(customerService.findByEmail(email).getEmail());
     }
 
+
     @PostMapping(value = "/login")
-    public ResponseEntity<?> loginCustomer(@RequestBody Customer customer)  {
+    public ResponseEntity<Customer> loginCustomer(@RequestBody Customer customer)  {
         if (customerService.matchLoginCredentials(customer)) {
-            return new ResponseEntity("Customer Logged in Successfully", HttpStatus.OK);
+            return new ResponseEntity(customer.getEmail(), HttpStatus.OK);
         }
         return new ResponseEntity("User or Password Invalid", HttpStatus.BAD_REQUEST);
     }
